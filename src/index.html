@@ -6,44 +6,41 @@
   </head>
 
   <body>
-    <!-- <div class="container">      -->
+    <div class="container">     
     <form class="makeExchange">
-      <!-- <div class="row">
+      <div class="row">
 
-        <div class="col" id="USD">         -->
-          <button type="button" class="makeExchange">submit<button>
+        <div class="col" id="enterUsd">            
             <label for="dollars">Enter USD amount $10-$1000</label>
             <input type="number" id="dollars"
          min="10" max="1000">         
-           <div class="USD"></div>      
-           
-                <!-- </div>
-        <div class="col-6" id="submit"> -->
-         
-        <!-- </div> -->
-         
-        <!-- </div> -->
-  
-        <!-- <div class="col" id="selectCurrency">         -->
-         
-           <label for="selectCur">Select currency to convert to:</label>
-           <select id="select">
+           <div class="USD"></div>         
+        </div>
+
+        <div class="col" id="selectCurrency"> 
+          <label for="selectCur">Select currency to convert to:</label>
+           <select id="convertTo">
             <option>---select---</option>
              <option>JPY</option>
              <option>ISK</option>
              <option>NZD</option>
              <option>IEP</option>
              <option>EUR</option>
-             <option>CRC</option>     
+             <option>CRC</option> 
+            </select>
+        </div>
+  
+        <div class="col" id="submit">                       
           <button type="button" class="makeExchange">submit<button>    
-           <div id="convertTo"></div>
-           <div id="showExchange"></div>
-            
-            <h3>test</h3>
+        </div>
 
-      <!-- </div>     -->
-    </form>
-    <h3>test</h3>
+        <div class="col" id="show">                        
+           <div id="showErrors"></div>
+           <div id="showExchange"></div>
+        </div>
+
+      </div>       
+    </form>  
     </div>
   </body>
 

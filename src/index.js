@@ -6,19 +6,25 @@ import CurrencyService from './currencyService.js';
 
 
 function clearFields() {
-  $('.showExchange').text();
+  $('.showExchange').text("");
+  $('.showErrors').text("");
 }
 
 function getExchange(response) {
+  console.log(response);
   if(response.conversion_rates) {
-    $('#showExchange').text(``);
+    $('#showExchange').text(`test`);
+  } else {
+    $('.showErrors').text(`There was an error: ${response.message}`);
   }
 }
 
 $(document).ready(function() {
-  $('#selectCurrency').submit(function(event) {
+  $('.makeExchange').submit(function(event) {
     event.preventDefault();
-    const convertTo = $("input#currency").val();
+    const convertTo = $("input#convertTo").val();
+    const usdAmount = $("input#dollars").val();
+    console.log(usdAmount);
     clearFields();
     CurrencyService.getExchange(convertTo)
       .then(function(response) {

@@ -1,13 +1,12 @@
 export default class CurrencyService {
-  static getExchange() {
-    return fetch(`https://v6.exchangerate-api.com/v6/b918269bed54ad6025b4f694/latest/USD`)
+  static getExchange(convertTo) {
+    return fetch(`https://v6.exchangerate-api.com/v6/b918269bed54ad6025b4f694/latest/${convertTo}`)
       .then(function(response) {
         console.log(response);
         if(!response.ok) {
           throw Error(response.statusText);
         }
-        return response.json();
-    
+        return response.json();    
       })
       .catch(function(error) {
         return error;

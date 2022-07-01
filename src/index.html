@@ -2,35 +2,48 @@
 <!DOCTYPE html> 
 <html lang="en-US">
   <head>
-   <title></title>
+   <title>Currency Exchanger</title>
   </head>
 
   <body>
-    <div class="container">
+    <!-- <div class="container">      -->
+    <form class="makeExchange">
+      <!-- <div class="row">
 
-      <div class="col-5 box">
-        
-        <form id="selectCurrency">
-          <label for="dollars">Enter USD amount $10-$100</label>
-          <input type="number" id="dollars"
-       min="10" max="100">
-        
-         <div id="USD"></div>       
-        </form>
-      </div>
+        <div class="col" id="USD">         -->
+          <button type="button" class="makeExchange">submit<button>
+            <label for="dollars">Enter USD amount $10-$1000</label>
+            <input type="number" id="dollars"
+         min="10" max="1000">         
+           <div class="USD"></div>      
+           
+                <!-- </div>
+        <div class="col-6" id="submit"> -->
+         
+        <!-- </div> -->
+         
+        <!-- </div> -->
+  
+        <!-- <div class="col" id="selectCurrency">         -->
+         
+           <label for="selectCur">Select currency to convert to:</label>
+           <select id="select">
+            <option>---select---</option>
+             <option>JPY</option>
+             <option>ISK</option>
+             <option>NZD</option>
+             <option>IEP</option>
+             <option>EUR</option>
+             <option>CRC</option>     
+          <button type="button" class="makeExchange">submit<button>    
+           <div id="convertTo"></div>
+           <div id="showExchange"></div>
+            
+            <h3>test</h3>
 
-      <div class="col-5 box">
-       
-        <form id="selectCurrency">
-         <label for="selectCur">Select currency to convert to:</label>
-         <select id="select">
-          <option>---select---</option>
-           <option>JPY</option>
-         <button type="submit" class="btn">submit</button>
-         <div id="convertTo"></div>
-         <div id="showExchange"></div>
-        </form>
-      </div>
+      <!-- </div>     -->
+    </form>
+    <h3>test</h3>
     </div>
   </body>
 

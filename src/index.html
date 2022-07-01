@@ -7,26 +7,28 @@
 
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>enter USD amount</h1>
+
+      <div class="col-5 box">
+        
         <form id="selectCurrency">
-         <label for="select">---Select Currency---</label>
-         <select id="select">
-           <option>JPY</option>
-         <button type="submit" class="btn">submit</button>
-         <div id="currency"></div>
-         <div id="showExchangw"></div>
+          <label for="dollars">Enter USD amount $10-$100</label>
+          <input type="number" id="dollars"
+       min="10" max="100">
+        
+         <div id="USD"></div>       
         </form>
       </div>
-      <div class="jumbotron">
-        <h1></h1>
+
+      <div class="col-5 box">
+       
         <form id="selectCurrency">
-         <label for="select">---Select Currency---</label>
+         <label for="selectCur">Select currency to convert to:</label>
          <select id="select">
+          <option>---select---</option>
            <option>JPY</option>
          <button type="submit" class="btn">submit</button>
-         <div id="currency"></div>
-         <div id="showExchangw"></div>
+         <div id="convertTo"></div>
+         <div id="showExchange"></div>
         </form>
       </div>
     </div>

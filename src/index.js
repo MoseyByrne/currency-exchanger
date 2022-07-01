@@ -6,15 +6,21 @@ import CurrencyService from './currencyService.js';
 
 
 function clearFields() {
-  $('.showExchange').text()
+  $('.showExchange').text();
+}
+
+function getExchange(response) {
+  if(response.conversion_rates) {
+    $('#showExchange').text(``);
+  }
 }
 
 $(document).ready(function() {
   $('#selectCurrency').submit(function(event) {
     event.preventDefault();
-    const currency = $("input#currency").val();
+    const convertTo = $("input#currency").val();
     clearFields();
-    CurrencyService.getExchange(currency)
+    CurrencyService.getExchange(convertTo)
       .then(function(response) {
         getExchange(response);
       });

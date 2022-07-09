@@ -13,20 +13,19 @@
         <div class="col" id="enterUsd">            
             <label for="dollars">Enter USD amount $10-$1000</label>
             <input type="number" id="dollars"
-         min="10" max="1000">         
-           <div class="USD"></div>         
+         min="10" max="1000">                           
         </div>
 
         <div class="col" id="selectCurrency"> 
-          <label for="selectCur">Select currency to convert to:</label>
+          <label for="convertTo">Select currency to convert to:</label>
            <select id="convertTo">
             <option>---select---</option>
-             <option>JPY</option>
-             <option>ISK</option>
-             <option>NZD</option>
-             <option>IEP</option>
-             <option>EUR</option>
-             <option>CRC</option> 
+             <option value="JPY">JPY ¥</option>
+             <option value="ISK">ISK kr</option>
+             <option value="NZD">NZD $</option>
+             <option value="IEP">IEP £</option>
+             <option value="EUR">EUR €</option>
+             <option value="CRC">CRC ₡</option> 
             </select>
         </div>
   
@@ -34,12 +33,13 @@
           <button class="btn-success" id="submitForm">submit</button>    
         </div>
 
-        <div class="col" id="show">                        
-           <div id="showErrors"></div>
-           <div id="showExchange"></div>
-        </div>
+      </div>   
+      
+      <div class="col" id="show">                        
+        <div id="showErrors"></div>
+        <div id="showExchange"></div>
+     </div>
 
-      </div>       
     </form>  
     </div>
   </body>

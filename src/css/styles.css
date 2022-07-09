@@ -4,12 +4,9 @@ body {
 
 .btn-success {
   background-color: blueviolet;
+  margin: 20px;
 }
 
-/* .col {
-  background-color:#582f00;
-  border: 10px ridge #281100;
-  margin-top: 2%;
-  padding: 1%;
-  text-align: center;
-} */
+.col {
+  margin: 20px;
+}

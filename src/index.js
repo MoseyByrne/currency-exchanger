@@ -11,24 +11,24 @@ function clearFields() {
 }
 
 function getExchange(response) {
-  console.log(response);
-  if(response.conversion_rates) {
-    $('#showExchange').text(`test`);
+  if(response.conversion_result) {  
+    $('#showExchange').text(` ${response.conversion_result}`);
   } else {
-    $('.showErrors').text(`There was an error: ${response.message}`);
+    $('#showErrors').text(`There was an error: ${response.message}`);
   }
 }
 
 $(document).ready(function() {
   $('.makeExchange').submit(function(event) {
     event.preventDefault();
-    const convertTo = $("input#convertTo").val();
-    const usdAmount = $("input#dollars").val();
-    console.log(usdAmount);
+    const convertTo = $("select#convertTo").val();
+    const amount = $("input#dollars").val();
+    const symbol = $("#convertTo option:selected").text();
     clearFields();
-    CurrencyService.getExchange(convertTo)
+    CurrencyService.getExchange(convertTo, amount)
       .then(function(response) {
         getExchange(response);
+        $('#showExchange').prepend(`USD $${amount} converts to ${symbol}`);
       });
   });
 });
